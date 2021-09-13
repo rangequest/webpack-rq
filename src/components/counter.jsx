@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 class Counter extends React.Component {
   state = {
-    count: 1,
+    count: 0,
   }
 
   handleIncrement = () => {
-    console.log('this in handleIncrement', this)
+    this.setState({ count: this.state.count + 1 })
   }
 
   render() {
