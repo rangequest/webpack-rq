@@ -1,16 +1,11 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 class Counter extends React.Component {
-  constructor() {
-    super()
-    console.log('this in Constructor ', this)
-    this.handleIncrement = this.handleIncrement.bind(this)
-  }
   state = {
     count: 1,
   }
 
-  handleIncrement() {
+  handleIncrement = () => {
     console.log('this in handleIncrement', this)
   }
 
@@ -31,7 +26,7 @@ class Counter extends React.Component {
     return classes
   }
 
-  formatCount() {
+  formatCount = () => {
     const { count } = this.state
     const z = 'zero'
     return count === 0 ? z : count
