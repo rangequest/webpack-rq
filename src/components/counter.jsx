@@ -1,15 +1,24 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 class Counter extends React.Component {
+  constructor() {
+    super()
+    console.log('this in Constructor ', this)
+    this.handleIncrement = this.handleIncrement.bind(this)
+  }
   state = {
     count: 1,
+  }
+
+  handleIncrement() {
+    console.log('this in handleIncrement', this)
   }
 
   render() {
     return (
       <React.Fragment>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        <button type="button" className="btn btn-secondary btn-sm">
+        <button onClick={this.handleIncrement} type="button" className="btn btn-secondary btn-sm">
           Increment
         </button>
       </React.Fragment>
