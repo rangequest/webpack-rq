@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Counter from './components/counter.jsx'
-import Timer from './timer.jsx'
+import Counters from './components/counters.jsx'
+import Timer from './components/timer.jsx'
 
-ReactDOM.render(<Counter />, document.getElementById('rq-comp'))
-ReactDOM.render(<Timer />, document.getElementById('rq-timer'))
+ReactDOM.render(<Counters />, document.getElementById('rq-comp'))
+// ReactDOM.render(<Timer />, document.getElementById('rq-timer'))
